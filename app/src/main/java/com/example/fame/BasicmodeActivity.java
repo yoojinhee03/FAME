@@ -17,10 +17,10 @@ public class BasicmodeActivity extends AppCompatActivity {
     ImageButton prevButton;
     ImageButton nextButton;
 
-    int cnt;
-    String level;
-    int startnum;
-    int endnum;
+    private int cnt;
+    private String level;
+    private int startnum;
+    private int endnum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
