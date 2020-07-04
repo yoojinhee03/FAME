@@ -22,6 +22,7 @@ public class BasicmodeActivity extends AppCompatActivity {
     private int startnum;
     private int endnum;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
