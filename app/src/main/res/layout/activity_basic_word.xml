@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#037CEC"
+    android:orientation="vertical"
+    tools:context="com.example.fame.WordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="73dp"
+            android:gravity="center"
+            android:text="초급"
+            android:textColor="#FDFAFA"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="183dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
+        <Button
+            android:id="@+id/listButton"
+            android:layout_width="76dp"
+            android:layout_height="37dp"
+            android:layout_weight="0"
+            android:background="@drawable/basicbutton"
+            android:text="list"
+            android:textColor="#037CEC" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="297dp">
+
+        <LinearLayout
+            android:layout_width="311dp"
+            android:layout_height="293dp"
+            android:layout_gravity="center"
+            android:gravity="center|center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/wordButton"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="#ffffff"
+                android:paddingTop="90dp"
+                android:stateListAnimator="@null"
+                android:text="Button"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/exText"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:background="#FFFCFC"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="TextView"
+                android:textColor="#030303"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chk_editText_ok"
+            android:layout_width="262dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/init_ok" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="313dp"
+        android:layout_height="144dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputText"
+            style="@style/basicWordEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:theme="@style/basicWordEditTextStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ttsButton"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/sound" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:text="단어"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/CheckButton"
+                android:layout_width="121dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:background="@drawable/basicbutton"
+                android:gravity="center"
+                android:text="확인"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ttsExButton"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/sound" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:text="예문"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    -
+
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:background="#00FCFAFA"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wleft" />
+
+        <LinearLayout
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/startText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#F8F4F4"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="/ "
+                android:textColor="#F8F4F4"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/endText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="#F8F4F4"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/rightButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:background="#00FDFAFA"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wright" />
+
+    </LinearLayout>
+
+</LinearLayout>

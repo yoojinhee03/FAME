@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InputSetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        android:layout_gravity="center"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/downButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:background="#00F3EDED"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/left" />
+
+        <TextView
+            android:id="@+id/cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="-10dp"
+            android:text="3"
+            android:textColor="#017BEC"
+            android:textSize="95sp" />
+
+        <ImageButton
+            android:id="@+id/upButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0"
+            android:background="#00E9D6D6"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="343dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            android:text="번 입력합니다."
+            android:textColor="#F3000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="#F3000000"
+            android:background="@drawable/finishbutton"
+            />
+    </LinearLayout>
+</LinearLayout>

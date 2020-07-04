@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#037CEC"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.fame.WordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="438dp"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:background="#037CEC"
+            android:text="삭제"
+            android:textColor="#F5F0F0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="단어장"
+            android:textColor="#FDFAFA"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="293dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCF9F9"
+            android:divider="#FF037CEC"
+            android:dividerHeight="1dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="1"
+            android:textColor="#FCFFFEFE"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Text"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:text="/ "
+            android:textColor="#FCFFFEFE"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"
+            android:textColor="#FCFFFEFE"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:background="#00FCFAFA"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wleft" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
+        <ImageButton
+            android:id="@+id/rightButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:background="#00FDFAFA"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wright" />
+
+    </LinearLayout>
+</LinearLayout>

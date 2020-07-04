@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#017BEC</item>
+        <item name="colorPrimaryDark">#017BEC</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#017BEC</item>
+    </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">#017BEC</item>
+    </style>
+
+    <style name="basicWordEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#ffffff</item>
+    </style>
+    <style name="quizModeEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#898989</item>
+        <item name="colorControlActivated">#898989</item>
+    </style>
+    <!-- For Splash Screen -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

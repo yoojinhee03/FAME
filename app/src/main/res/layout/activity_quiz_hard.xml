@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".QuizHardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#017BEC"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ "
+            android:textColor="#017BEC"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#017BEC"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="167dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/meanText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="211dp"
+                tools:layout_editor_absoluteY="190dp" />
+
+            <TextView
+                android:id="@+id/engText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chk_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/init_ok" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="322dp"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/answerText"
+            style="@style/quizModeEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:theme="@style/quizModeEditTextStyle" />
+
+        <Button
+            android:id="@+id/chkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/chkbutton"
+            android:text="확인" />
+    </LinearLayout>
+
+</LinearLayout>

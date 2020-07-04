@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.fame.SlideSetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="156dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="246dp"
+        android:layout_height="121dp"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="미션"
+            android:textColor="#017BEC"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.494" />
+
+        <Button
+            android:id="@+id/missionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ECE5E5"
+            android:gravity="right|center_vertical"
+            android:text="기본"
+            android:textColor="#837F7F"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00F3F0F0"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/missionButton"
+            app:srcCompat="@drawable/right" />
+    </LinearLayout>
+
+</LinearLayout>

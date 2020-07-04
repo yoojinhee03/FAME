@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".CardGameActivity">
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="161dp"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="161dp"
+        android:gravity="center|top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkbutton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="161dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:background="@drawable/chkbutton" />
+
+        <Button
+            android:id="@+id/button35"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:background="@drawable/chkbutton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="87dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="#00F7F1F1"
+            android:text="다시하기" />
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#00F7F1F1"
+            android:text="끝내기" />
+    </LinearLayout>
+</LinearLayout>

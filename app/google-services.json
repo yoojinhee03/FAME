@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1014755098186",
+    "firebase_url": "https://fame-e8ddb.firebaseio.com",
+    "project_id": "fame-e8ddb",
+    "storage_bucket": "fame-e8ddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014755098186:android:14ddab604a518fac4770b3",
+        "android_client_info": {
+          "package_name": "com.example.fame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014755098186-cdn9m7000qj7r8uj4p9hmpfvn68ht9mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmWuJVIelkGqnp_p8uh-B-KJvyd1rIPkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014755098186-cdn9m7000qj7r8uj4p9hmpfvn68ht9mu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

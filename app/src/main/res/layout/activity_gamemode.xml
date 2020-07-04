@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".GamemodeActivity">
+
+    <LinearLayout
+        android:layout_width="334dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chkbutton"
+            android:text="초급"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chkbutton"
+            android:text="중급"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chkbutton"
+            android:text="고급"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
