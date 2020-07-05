@@ -30,7 +30,7 @@ public class InputSetActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_set_actvity);
-        Toast.makeText(this, "oncreate", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "oncreate", Toast.LENGTH_SHORT).show();
         cnt=(TextView)findViewById(R.id.cnt);
         upButton=findViewById(R.id.upButton);
         downButton=findViewById(R.id.downButton);
@@ -38,7 +38,7 @@ public class InputSetActivity extends AppCompatActivity {
         mContext = this;
         count=Integer.parseInt(cnt.getText().toString());
 
-        Toast.makeText(getApplicationContext(),result, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),result, Toast.LENGTH_SHORT).show();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//뒤로가기
 
         upButton.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +106,7 @@ public class InputSetActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
         String data = cnt.getText().toString();
         outState.putString("data",data);
 

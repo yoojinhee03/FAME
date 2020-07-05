@@ -77,7 +77,7 @@ public class SlideSetActivity extends AppCompatActivity {
             if(missionButton.getText().toString().equals("기본")) {
                 ((InputSetActivity)InputSetActivity.mContext).result="reset";
             }
-            Toast.makeText(getApplicationContext(), "메뉴화면으로부터 응답 : " + category + "," + inputcount, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "메뉴화면으로부터 응답 : " + category + "," + inputcount, Toast.LENGTH_SHORT).show();
         }
 //        if (requestCode == 200) {//반복
 //            if (resultCode == Activity.RESULT_OK) {

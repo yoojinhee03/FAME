@@ -43,7 +43,7 @@ public class AlarmLevelSetActivity extends AppCompatActivity {
         category = intent.getStringExtra("category");
         wordcount=intent.getIntExtra("wordcount",-1);
         inputcount = intent.getIntExtra("inputcount", -1);
-            Toast.makeText(getApplicationContext(), "알람 : " + hour + "," + minute+ "," +dayindex+ "," + inputcount +","+ category, Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "알람 : " + hour + "," + minute+ "," +dayindex+ "," + inputcount +","+ category, Toast.LENGTH_LONG).show();
         //}
        // else Toast.makeText(getApplicationContext(), "알람 : " + hour + "," + minute+ "," + index[0] +","+ category, Toast.LENGTH_LONG).show();
 

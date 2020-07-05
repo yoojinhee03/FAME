@@ -57,7 +57,7 @@ public class SelModeActivity extends AppCompatActivity {
         quizButton=(ImageButton) findViewById(R.id.quizButton);
         gameButton=(ImageButton) findViewById(R.id.gameButton);
 
-        Toast.makeText(SelModeActivity.this, ""+count(),Toast.LENGTH_SHORT).show();
+//        Toast.makeText(SelModeActivity.this, ""+count(),Toast.LENGTH_SHORT).show();
 
         effortButton.setOnClickListener(new View.OnClickListener() {
             @Override

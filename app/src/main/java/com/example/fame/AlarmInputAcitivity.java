@@ -121,7 +121,7 @@ public class AlarmInputAcitivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(data);
                 JSONArray wordArray = jsonObject.getJSONArray("note");
                 wordArrayJSONObject = wordArray.getJSONObject(new Random().nextInt(wordArray.length()));
-                Toast.makeText(this, wordArrayJSONObject.getString("word"), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, wordArrayJSONObject.getString("word"), Toast.LENGTH_SHORT).show();
 
                 wordText.setText(wordArrayJSONObject.getString("word"));
                 meanText.setText(wordArrayJSONObject.getString("mean"));

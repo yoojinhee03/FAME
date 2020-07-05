@@ -156,7 +156,7 @@ public class AlarmBasicActivity extends AppCompatActivity{
             }
         }
         else{
-            Toast.makeText(this, "파일 X", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "파일 X", Toast.LENGTH_SHORT).show();
         }
     }
 

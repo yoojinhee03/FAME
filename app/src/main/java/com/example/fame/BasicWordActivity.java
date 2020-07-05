@@ -167,11 +167,11 @@ public class BasicWordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(inputText.getText().toString().equals(cursor.getString(cursor.getColumnIndex("WORD")))){
-                    Toast.makeText(BasicWordActivity.this, "O", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(BasicWordActivity.this, "O", Toast.LENGTH_SHORT).show();
                     init_chk_editText_ok();
                     inputText.setText(null);
                 }else{
-                    Toast.makeText(BasicWordActivity.this, "X", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(BasicWordActivity.this, "X", Toast.LENGTH_SHORT).show();
                     inputText.setText(null);
                 }
             }

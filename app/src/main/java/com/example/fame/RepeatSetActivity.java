@@ -33,7 +33,7 @@ public class RepeatSetActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//뒤로가기
         mContext=this;
 
-        Toast.makeText(RepeatSetActivity.this, result, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(RepeatSetActivity.this, result, Toast.LENGTH_SHORT).show();
 
         finishButton = findViewById(R.id.nextButton);
         day = new CheckBox[]

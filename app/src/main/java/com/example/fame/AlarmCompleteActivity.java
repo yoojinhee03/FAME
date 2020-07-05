@@ -64,7 +64,7 @@ public class AlarmCompleteActivity extends AppCompatActivity {
         inputcount = intent.getIntExtra("inputcount", -1);
         wordcount = intent.getIntExtra("wordcount", -1);
 
-        Toast.makeText(getApplicationContext(), "슬라이드 : " + category + "," + hour+ "," + minute+ "," + inputcount+"," + level+","+dayindex, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "슬라이드 : " + category + "," + hour+ "," + minute+ "," + inputcount+"," + level+","+dayindex, Toast.LENGTH_LONG).show();
 
         this.calendar = Calendar.getInstance();
 
@@ -108,7 +108,7 @@ public class AlarmCompleteActivity extends AppCompatActivity {
             int id= Integer.parseInt(cursor.getString(cursor.getColumnIndex("_id")));
             fileName=id+"alarm.json";
             writedata();
-            Toast.makeText(getApplicationContext(),"저장되었습니다",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(),"저장되었습니다",Toast.LENGTH_SHORT).show();
         }
     }
     public static AlarmManager alarmManager = null;
@@ -163,7 +163,7 @@ public class AlarmCompleteActivity extends AppCompatActivity {
 
         //Toast 보여주기(알람 시간 표시)
         SimpleDateFormat format = new SimpleDateFormat("MM-dd HH:mm:ss", Locale.getDefault());
-        Toast.makeText(this, "Alarm: " + format.format(calendar.getTime()), Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Alarm: " + format.format(calendar.getTime()), Toast.LENGTH_LONG).show();
     }
     public String getLevel(){
         String sql = null;

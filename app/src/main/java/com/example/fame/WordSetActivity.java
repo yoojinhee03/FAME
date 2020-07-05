@@ -94,7 +94,7 @@ public class WordSetActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
         String data = cnt.getText().toString();
         outState.putString("data",data);
 
