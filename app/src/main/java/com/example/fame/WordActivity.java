@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -138,6 +139,7 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
                                     startActivity(intent1);
                                     finish();
                                 }
+                                serviceChk();
                             }
                             else if (table_name.equals("AlarmCategory")){
                                 cancelAlarmManger(id);
@@ -156,6 +158,22 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
                 builder.show();
         }
     }
+    public void serviceChk(){
+        SQLiteDatabase db=DBHelper.getInstance(WordActivity.this).getReadableDatabase();
+        String sql = "SELECT * FROM SlideCategory";
+        Cursor cursor = db.rawQuery(sql, null);
+        if(cursor.getCount()>0){
+            cursor.moveToLast();
+            Intent intent = new Intent(this, SlideService.class);
+            SlideService slideService=new SlideService();
+            slideService.setCategory(category);
+            intent.putExtra("id",Integer.parseInt(cursor.getString(cursor.getColumnIndex("_id"))));
+            intent.putExtra("category",cursor.getString(cursor.getColumnIndex("category")));
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+                startForegroundService(intent);
+            }else startService(intent);
+        }
+    }
 
     public boolean deleteFile(String fileName){
         String dir = getFilesDir().getAbsolutePath();
@@ -170,7 +188,7 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
     AlarmManager alarmManager;
     public void cancelAlarmManger(long alarmId) {//알람 삭제
 
-        if (pendingIntent != null) {
+//        if (pendingIntent != null) {
             Log.e("아이디", String.valueOf(alarmId));
             alarmManager = (AlarmManager) mContext.getApplicationContext().getSystemService(Context.ALARM_SERVICE);
             Intent intent = new Intent(mContext.getApplicationContext(), AlarmReceiver.class);
@@ -179,7 +197,7 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
             pendingIntent.cancel();
             alarmManager = null;
             pendingIntent = null;
-        }
+//        }
     }
     public void tts(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

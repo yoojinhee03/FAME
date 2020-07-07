@@ -151,7 +151,7 @@ public class AlarmCompleteActivity extends AppCompatActivity {
         intent.putExtra("dayindex",cursor.getString(cursor.getColumnIndex("dayindex")));
 
         pendingIntent = (PendingIntent) PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, this.calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, bTime, AlarmManager.INTERVAL_DAY, pendingIntent);
 //        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
 //            //alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,bTime,pendingIntent);
 //            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, bTime, AlarmManager.INTERVAL_DAY, pendingIntent);

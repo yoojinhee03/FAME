@@ -1,13 +1,18 @@
 package com.example.fame;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,11 +24,14 @@ import android.widget.TextView;
 
 import java.io.File;
 
+import static com.example.fame.SelModeActivity.ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE;
+
 public class EffortmodeActivity extends AppCompatActivity {
 
     private ImageButton addButton;
     private Button slideButton;
     private Button alarmButton;
+    private ImageButton plusButton;
 
     private Cursor cursor;
     private DBHelper dbHelper;
@@ -46,6 +54,12 @@ public class EffortmodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_effortmode);
 
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M // M 버전(안드로이드 6.0 마시멜로우 버전) 보다 같거나 큰 API에서만 설정창 이동 가능합니다.,
+                && !Settings.canDrawOverlays(this)) {
+            PermissionOverlay();
+        }//백그라운드 실행
+
         mContext = this;
         listView=findViewById(R.id.word_note);
         View footer = getLayoutInflater().inflate(R.layout.activity_effortmode_footer, null, false) ;
@@ -63,6 +77,10 @@ public class EffortmodeActivity extends AppCompatActivity {
             alarmlist();
         }else if(recordslidecount()>0){
             slidelist();
+        }else{
+            Intent intent=new Intent(EffortmodeActivity.this,SelModeActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +112,27 @@ public class EffortmodeActivity extends AppCompatActivity {
         });
     }
 
+    @TargetApi(Build.VERSION_CODES.M) //M 버전 이상 API를 타겟으로,
+    public void PermissionOverlay() {
+        Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                Uri.parse("package:" + getPackageName()));
+        startActivityForResult(intent, ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE);
+    }//백그라운드 실행
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE) {
+            if (Settings.canDrawOverlays(this)) {
+                // You have permission
+// 오버레이 설정창 이동 후 이벤트 처리합니다.
+
+            }else{
+                finish();
+            }
+        }
+    }
     public void slidelist(){
         table="slide";
         table_name=SlideCategory.CategoryEntry.TABLE_NAME;

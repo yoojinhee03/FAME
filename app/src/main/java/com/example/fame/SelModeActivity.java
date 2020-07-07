@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,7 +37,7 @@ public class SelModeActivity extends AppCompatActivity {
     private ImageButton basicButton;
     private ImageButton quizButton;
     private ImageButton gameButton;
-
+    private MediaPlayer mediaPlayer;
     private SQLiteDatabase db;
     public static int ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE= 5469;
 
@@ -46,12 +47,7 @@ public class SelModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sel_mode);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M // M 버전(안드로이드 6.0 마시멜로우 버전) 보다 같거나 큰 API에서만 설정창 이동 가능합니다.,
-                && !Settings.canDrawOverlays(this)) {
-            PermissionOverlay();
-        }//백그라운드 실행
         initLoadDB();
-
         effortButton = (ImageButton) findViewById(R.id.effortButton);
         basicButton = (ImageButton) findViewById(R.id.basicButton);
         quizButton=(ImageButton) findViewById(R.id.quizButton);
@@ -97,26 +93,7 @@ public class SelModeActivity extends AppCompatActivity {
             }
         });
      }
-    @TargetApi(Build.VERSION_CODES.M) //M 버전 이상 API를 타겟으로,
-    public void PermissionOverlay() {
-        Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                Uri.parse("package:" + getPackageName()));
-        startActivityForResult(intent, ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE);
-    }//백그라운드 실행
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE) {
-            if (Settings.canDrawOverlays(this)) {
-                // You have permission
-
-// 오버레이 설정창 이동 후 이벤트 처리합니다.
-
-            }
-        }
-    }
     public int count() {
         int cnt = 0;
         Cursor cursor;

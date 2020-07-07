@@ -75,7 +75,7 @@ public class SlideCompleteActivity extends AppCompatActivity {
                 null,
                 values);
         if(newRowId==-1){
-           // Toast.makeText(getApplicationContext(),"저장에 문제가 발생하였습니다",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"저장에 문제가 발생하였습니다",Toast.LENGTH_SHORT).show();
         }else{
             db= DBHelper.getInstance(this).getReadableDatabase();
             String sql="SELECT _id from SlideCategory";

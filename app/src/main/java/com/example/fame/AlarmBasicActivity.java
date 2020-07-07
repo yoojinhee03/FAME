@@ -202,12 +202,12 @@ public class AlarmBasicActivity extends AppCompatActivity{
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        //MediaPlayer release()
-//        if(this.mediaPlayer !=null) {
-//         this.mediaPlayer.stop();
-//         this.mediaPlayer.release();
-//         this.mediaPlayer=null;
-//
-//        }
+//        MediaPlayer release()
+        if(this.mediaPlayer !=null) {
+         this.mediaPlayer.stop();
+         this.mediaPlayer.release();
+         this.mediaPlayer=null;
+
+        }
     }
 }

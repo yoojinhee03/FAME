@@ -157,4 +157,15 @@ public class AlarmInputAcitivity extends AppCompatActivity {
     public void onBackPressed() {
         //super.onBackPressed();
     }//백키 막기
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+//        MediaPlayer release()
+        if(this.mediaPlayer !=null) {
+            this.mediaPlayer.stop();
+            this.mediaPlayer.release();
+            this.mediaPlayer=null;
+        }
+    }
 }
