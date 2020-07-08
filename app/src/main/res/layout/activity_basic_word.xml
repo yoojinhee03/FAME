@@ -192,7 +192,7 @@
         android:layout_width="347dp"
         android:layout_height="95dp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="bottom|center"
         android:orientation="horizontal">
 
         <ImageButton
@@ -208,8 +208,9 @@
             android:layout_width="203dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:gravity="bottom|center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/startText"

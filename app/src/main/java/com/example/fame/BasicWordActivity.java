@@ -194,14 +194,14 @@ public class BasicWordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tts.setPitch(0.5f);
-                tts.speak(wordButton.getText().toString(),TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak(cursor.getString(cursor.getColumnIndex("WORD")),TextToSpeech.QUEUE_FLUSH, null);
             }
         });
         ttsExButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tts.setPitch(0.5f);
-                tts.speak(exText.getText().toString(),TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak(cursor.getString(cursor.getColumnIndex("EXAMPLE")),TextToSpeech.QUEUE_FLUSH, null);
             }
         });
     }

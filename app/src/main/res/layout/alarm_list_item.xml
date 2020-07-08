@@ -59,10 +59,11 @@
             <TextView
                 android:id="@+id/levelText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="560dp"
                 android:layout_gravity="right"
                 android:layout_weight="1"
-                android:gravity="bottom|center"
+                android:gravity="bottom|center|right"
+                android:paddingRight="2dp"
                 android:text="TextView"
                 android:textColor="#037CEC"
                 android:textSize="27sp" />
@@ -70,9 +71,10 @@
             <TextView
                 android:id="@+id/dayText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="547dp"
                 android:layout_weight="1"
-                android:gravity="center|top"
+                android:gravity="center|right|top"
+                android:paddingRight="5dp"
                 android:text="TextView"
                 android:textColor="#037CEC"
                 android:textSize="15sp" />

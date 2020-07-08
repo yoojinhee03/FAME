@@ -184,20 +184,20 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }else return false;
     }
-    PendingIntent pendingIntent;
-    AlarmManager alarmManager;
+//    PendingIntent pendingIntent;
+//    AlarmManager alarmManager;
     public void cancelAlarmManger(long alarmId) {//알람 삭제
 
-//        if (pendingIntent != null) {
+        if (((AlarmCompleteActivity)AlarmCompleteActivity.mContext).pendingIntent!=null) {
             Log.e("아이디", String.valueOf(alarmId));
-            alarmManager = (AlarmManager) mContext.getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).alarmManager = (AlarmManager) mContext.getApplicationContext().getSystemService(Context.ALARM_SERVICE);
             Intent intent = new Intent(mContext.getApplicationContext(), AlarmReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(mContext.getApplicationContext(), (int)alarmId, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-            alarmManager.cancel(pendingIntent);
-            pendingIntent.cancel();
-            alarmManager = null;
-            pendingIntent = null;
-//        }
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).pendingIntent = PendingIntent.getBroadcast(mContext.getApplicationContext(), (int)alarmId, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).alarmManager.cancel(((AlarmCompleteActivity)AlarmCompleteActivity.mContext).pendingIntent);
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).pendingIntent.cancel();
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).alarmManager = null;
+            ((AlarmCompleteActivity)AlarmCompleteActivity.mContext).pendingIntent = null;
+        }
     }
     public void tts(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
